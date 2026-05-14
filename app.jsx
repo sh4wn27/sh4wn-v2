@@ -65,7 +65,7 @@ function App() {
           <div className="nav-links">
             <a href="#work">work</a>
             <a href="#about">about</a>
-            <a href="#beyond">awards</a>
+            <a href="#beyond">beyond</a>
             <a href="#research">research</a>
             <a href="#experience">experience</a>
             <a href="#skills">skills</a>
