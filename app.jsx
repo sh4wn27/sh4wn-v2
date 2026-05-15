@@ -32,6 +32,12 @@ function App() {
       ['shawn',    'shawn'],
       ['verse',    'verse'],
       ['boba',     'boba'],
+      ['cube',     'cube'],
+      ['connect',  'connect'],
+      ['help',     'help'],
+      ['papers',   'papers'],
+      ['skills',   'skills'],
+      ['matrix',   'matrix'],
     ];
     const onKey = (e) => {
       if (e.target.matches('input, textarea')) return;
@@ -108,7 +114,7 @@ function App() {
             </div>
 
             <p className="hero-bio">
-              Huanxuan, also known as Shawn, is a junior at Thomas Jefferson High
+              Huanxuan, also known as <strong>Shawn</strong>, is a junior at Thomas Jefferson High
               School for Science & Technology. Incoming Researcher @ Children's National,
               Building at the intersection of
               <strong> AI, biomedicine, and robotics.</strong>
@@ -131,7 +137,7 @@ function App() {
         <section className="shell" data-screen-label="02 Stats">
           <div className="stats">
             <div className="stat">
-              <div className="n">7000<span className="unit"></span></div>
+              <div className="n">7000<span className="unit">+</span></div>
               <div className="lbl">Students reached</div>
               <div className="desc">Growing Up with Robotics, international</div>
             </div>
@@ -141,7 +147,7 @@ function App() {
               <div className="desc">Across schools, camps, and chapters</div>
             </div>
             <div className="stat">
-              <div className="n">8000<span className="unit">×</span></div>
+              <div className="n">8000<span className="unit">+</span></div>
               <div className="lbl">Users reached</div>
               <div className="desc">CAPA · SKINAI</div>
             </div>
@@ -245,31 +251,8 @@ function App() {
             </article>
 
             <article className="proj">
-              <div className="proj-vis vis-ftc">
-                <span className="proj-num">04</span>
-                <span className="proj-status"><span className="d" />CHESAPEAKE CHAMPIONSHIP</span>
-                <ProjectFtcVis />
-                <span className="proj-vis-label">[ ftc.14607.dwg ]</span>
-              </div>
-              <div className="proj-body">
-                <div className="proj-tags"><span>Competitive Robotics</span><span>Engineering</span><span>Captain</span></div>
-                <h3>FTC 14607 — Robot Uprising</h3>
-                <p className="sub">Robot Uprising · Team Captain</p>
-                <p className="desc">
-                  Team captain for Robot Uprising. Competed at FTC Chesapeake
-                  Championship. Led mechanical design and autonomous
-                  programming. Drove strategy and systems integration.
-                </p>
-                <div className="stack">Java · CAD · FTC SDK</div>
-                <div className="proj-links">
-                  <a href="https://www.robotuprising.org/" target="_blank" rel="noreferrer">Website ↗</a>
-                </div>
-              </div>
-            </article>
-
-            <article className="proj">
               <div className="proj-vis vis-gur">
-                <span className="proj-num">05</span>
+                <span className="proj-num">04</span>
                 <span className="proj-status"><span className="d" />ACTIVE</span>
                 <ProjectGurVis />
                 <span className="proj-vis-label">[ gur.reach.map ]</span>
@@ -286,6 +269,29 @@ function App() {
                 <div className="stack">501(c)(3) · 300+ service hours · 7,000+ students</div>
                 <div className="proj-links">
                   <a href="https://growingupwithrobotics.org" target="_blank" rel="noreferrer">Website ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article className="proj">
+              <div className="proj-vis vis-ftc">
+                <span className="proj-num">05</span>
+                <span className="proj-status"><span className="d" />CHESAPEAKE CHAMPIONSHIP</span>
+                <ProjectFtcVis />
+                <span className="proj-vis-label">[ ftc.14607.dwg ]</span>
+              </div>
+              <div className="proj-body">
+                <div className="proj-tags"><span>Competitive Robotics</span><span>Engineering</span><span>Captain</span></div>
+                <h3>FTC 14607 — Robot Uprising</h3>
+                <p className="sub">Robot Uprising · Team Captain</p>
+                <p className="desc">
+                  Team captain for Robot Uprising. Competed at FTC Chesapeake
+                  Championship. Led mechanical design and autonomous
+                  programming. Drove strategy and systems integration.
+                </p>
+                <div className="stack">Java · CAD · FTC SDK</div>
+                <div className="proj-links">
+                  <a href="https://www.robotuprising.org/" target="_blank" rel="noreferrer">Website ↗</a>
                 </div>
               </div>
             </article>
@@ -354,11 +360,11 @@ function App() {
                 </div>
                 <div className="row">
                   <div className="b">♪</div>
-                  <div>practicing <b>Chopin Op. 64 No. 1</b></div>
+                  <div>practicing for <b>piano license exam (arsm)</b></div>
                 </div>
                 <div className="row">
                   <div className="b">☕</div>
-                  <div>weekend shifts at <b>Tea-Do Fairfax</b></div>
+                  <div>night shifts at <b>Tea-Do Fairfax</b></div>
                 </div>
                 <div className="row">
                   <div className="b">✚</div>
@@ -727,94 +733,50 @@ function SkillGroup({ name, count, items }) {
 // project visualizations
 function ProjectCapaVis() {
   return (
-    <svg viewBox="0 0 400 220" style={{position:'absolute', inset:0, width:'100%', height:'100%'}}>
-      <g stroke="var(--accent)" fill="none" strokeOpacity="0.8" strokeWidth="1">
-        <path d="M0,140 Q60,80 130,120 T260,90 T400,130" strokeWidth="1.5" />
-        <path d="M0,160 Q60,100 130,140 T260,110 T400,150" strokeOpacity="0.4" strokeDasharray="2 3" />
-        {[40,90,140,190,240,290,340].map((x, i) => (
-          <circle key={i} cx={x} cy={120 + Math.sin(i)*30} r="3" fill="var(--accent)" />
-        ))}
-      </g>
-      <g fontFamily="JetBrains Mono" fontSize="9" fill="var(--ink-mute)">
-        <text x="14" y="40">ESM-2 → cross-attn → DeepHit</text>
-        <text x="14" y="56" fill="var(--ink-dim)">survival · GvHD · relapse · TRM</text>
-      </g>
-    </svg>
+    <>
+      <img src="img/01.jpg" alt="CAPA" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
+      <div style={{
+        position:'absolute',
+        bottom:0,
+        left:0,
+        right:0,
+        height:'50px',
+        background:'linear-gradient(to bottom, transparent, rgba(255,255,255,0.1))',
+        pointerEvents:'none'
+      }} />
+    </>
   );
 }
 
 function ProjectSkinVis() {
   return (
-    <svg viewBox="0 0 400 220" style={{position:'absolute', inset:0, width:'100%', height:'100%'}}>
-      <g stroke="#ff8a3d" fill="none">
-        {Array.from({length: 8}).map((_, i) => (
-          <circle key={i} cx={200} cy={120} r={20 + i*12} strokeOpacity={0.5 - i*0.05} />
-        ))}
-        <rect x="180" y="100" width="40" height="40" stroke="#ff8a3d" strokeDasharray="2 3" />
-      </g>
-      <g fontFamily="JetBrains Mono" fontSize="9" fill="var(--ink-dim)">
-        <text x="14" y="40">cv · skin lesion classifier</text>
-        <text x="14" y="56" fill="var(--ink-mute)">conf 0.87 · dermatologist referral</text>
-      </g>
-    </svg>
+    <img src="img/03.jpg" alt="SkinAI" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
   );
 }
 
 function ProjectFuseVis() {
   return (
-    <svg viewBox="0 0 400 220" style={{position:'absolute', inset:0, width:'100%', height:'100%'}}>
-      <g stroke="#3c78c8" fill="none">
-        <rect x="160" y="40" width="80" height="140" rx="8" />
-        <rect x="170" y="56" width="60" height="6" rx="2" fill="#3c78c8" fillOpacity="0.3" />
-        <rect x="170" y="70" width="40" height="4" rx="2" fill="#3c78c8" fillOpacity="0.3" />
-        <rect x="170" y="84" width="60" height="60" rx="3" strokeOpacity="0.6" />
-        <rect x="170" y="152" width="60" height="6" rx="2" fill="#3c78c8" fillOpacity="0.3" />
-      </g>
-      <g fontFamily="JetBrains Mono" fontSize="9" fill="var(--ink-dim)">
-        <text x="14" y="40">react native + aws</text>
-        <text x="14" y="56" fill="var(--ink-mute)">chapter mgmt mobile</text>
-      </g>
-    </svg>
+    <>
+      <img src="img/06.jpg" alt="FBLA Fuse" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
+      <div style={{
+        position:'absolute',
+        inset:0,
+        backgroundColor:'rgba(255,255,255,0.25)',
+        pointerEvents:'none'
+      }} />
+    </>
   );
 }
 
 function ProjectFtcVis() {
   return (
-    <svg viewBox="0 0 400 220" style={{position:'absolute', inset:0, width:'100%', height:'100%'}}>
-      <g stroke="var(--accent)" fill="none">
-        <rect x="140" y="80" width="120" height="80" />
-        <circle cx="155" cy="170" r="14" />
-        <circle cx="245" cy="170" r="14" />
-        <rect x="170" y="60" width="60" height="20" />
-        <line x1="160" y1="100" x2="240" y2="100" strokeDasharray="2 3" />
-        <line x1="200" y1="80" x2="200" y2="160" strokeDasharray="2 3" />
-      </g>
-      <g fontFamily="JetBrains Mono" fontSize="9" fill="var(--ink-dim)">
-        <text x="14" y="40">team 14607 · captain</text>
-        <text x="14" y="56" fill="var(--ink-mute)">java · cad · ftc sdk</text>
-      </g>
-    </svg>
+    <img src="img/05.jpg" alt="FTC 14607" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
   );
 }
 
 function ProjectGurVis() {
   return (
-    <svg viewBox="0 0 400 220" style={{position:'absolute', inset:0, width:'100%', height:'100%'}}>
-      <g fontFamily="JetBrains Mono" fontSize="9" fill="var(--ink-dim)">
-        <text x="14" y="40">global reach · 501(c)(3)</text>
-        <text x="14" y="56" fill="var(--ink-mute)">7,000+ students</text>
-      </g>
-      <g fill="#3a3a36" fillOpacity="0.7">
-        {Array.from({length: 50}).map((_, i) => {
-          const x = (i * 37) % 380 + 10;
-          const y = ((i * 53) % 140) + 70;
-          return <circle key={i} cx={x} cy={y} r={Math.random() * 2 + 0.5} />;
-        })}
-        <circle cx="200" cy="120" r="6" fill="var(--accent)" />
-        <circle cx="200" cy="120" r="14" fill="none" stroke="var(--accent)" strokeOpacity="0.5" />
-        <circle cx="200" cy="120" r="22" fill="none" stroke="var(--accent)" strokeOpacity="0.2" />
-      </g>
-    </svg>
+    <img src="img/04.jpg" alt="GUR" style={{position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover'}} />
   );
 }
 
@@ -832,6 +794,65 @@ function ProjectAymVis() {
         <text x="14" y="56" fill="var(--ink-mute)">lego spike · cad · python</text>
       </g>
     </svg>
+  );
+}
+
+// ============================================================
+// MatrixEgg — falling text/code animation
+// ============================================================
+function MatrixEgg() {
+  const canvasRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    const chars = 'sh4wn';
+    const charArray = chars.split('');
+    const fontSize = 16;
+    const columns = Math.floor(rect.width / fontSize);
+    const drops = Array(columns).fill(0);
+
+    const draw = () => {
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
+      ctx.fillRect(0, 0, rect.width, rect.height);
+      ctx.fillStyle = '#ff2d7e';
+      ctx.font = `${fontSize}px monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = charArray[Math.floor(Math.random() * charArray.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > rect.height && Math.random() > 0.95) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    };
+
+    const interval = setInterval(draw, 50);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        width: '100%',
+        height: '300px',
+        backgroundColor: '#000',
+        display: 'block',
+        borderRadius: 'var(--radius)',
+      }}
+    />
   );
 }
 
@@ -1057,28 +1078,143 @@ status:   `}<span className="a">in stock</span>
 {`event       3x3
 method      CFOP
 PB          5.21s
-PB avg5        ~8.98s
+PB avg5     8.98spas
+WCA ID:     2022LISH01
 mood        `}<span className="a">maybe</span>
         </pre>
       </>
     ),
-    hire: (
+    connect: (
       <>
-        <h3>~ ./hire-me</h3>
+        <h3>~ ./connect</h3>
         <pre>
-{`looking for:
-  - summer 2026 research / internship
-  - collabs on transplant ML / GvHD
-  - clinical-ML / dermatology / robotics
-  - mentors and senior advisors
+{`interested in:
+  - research collabs (ML, transplant, robotics)
+  - mentorship from researchers and builders
+  - hackathons and competitions
+  - learning new things
 
-what i bring:
+what i've done:
   - 2 pending patents, 1 published paper
-  - production ML in two products
-  - a team and a nonprofit
+  - ML in production (CAPA, SkinAI)
+  - nonprofit leadership (GUR)
+  - speedcubing and competition math
 
-contact: `}<span className="k">shawnli1028@gmail.com</span>
+let's build something:
+  `}<span className="k">shawnli1028@gmail.com</span>
         </pre>
+      </>
+    ),
+    help: (
+      <>
+        <h3>~ help</h3>
+        <pre>
+{`EASTER EGG COMMANDS:
+
+  whoami        show system info
+  sudo          permission denied lol
+  shawn         ./shawn --help
+  verse         daily bible verse
+  boba          tea order preferences
+  cube          speedcubing stats
+  connect       research & collaboration
+  papers        published research
+  skills        tech stack breakdown
+  matrix        `}<span className="a">see for yourself</span>{`
+
+type any command anywhere on the page to trigger
+esc or click outside to close
+
+_happy exploring!_`}
+        </pre>
+      </>
+    ),
+    papers: (
+      <>
+        <h3>~ ./papers</h3>
+        <pre>
+{`PUBLISHED & PENDING:
+
+PUBLISHED:
+
+✓ Immunogenomics of GvHD Transplant Outcomes
+  Status:     Published
+  Journal:    [pending disclosure]
+  Year:       2025
+  Role:       Lead author, data science
+  Focus:      HLA typing, survival analysis, HSCT
+  Impact:     Clinical decision support for transplant teams
+
+PENDING PATENTS:
+
+⧂ CAPA: Clinical AI for Prediction & Analysis (Patent 1/2)
+  Status:     Pending patent
+  Year:       2025-2026
+  Focus:      transplant ML, GvHD prediction, survival models
+  Tech:       PyTorch, TensorFlow, survival analysis
+  Target:     ArXiv Q3 2026, clinical deployment Q4 2026
+
+⧂ CAPA: Clinical AI for Prediction & Analysis (Patent 2/2)
+  Status:     Pending patent
+  Year:       2025-2026
+  Focus:      competing risks, immunogenomics integration
+  Tech:       ESM-2, protein embeddings, statistical modeling
+
+⧂ SkinAI: Dermatology Classification System
+  Status:     Pending patent
+  Year:       2024-2025
+  Focus:      computer vision, mobile deployment, real-time inference
+  Tech:       OpenCV, ONNX, efficient neural networks
+  Deployed:   Mobile app, web interface
+
+RESEARCH IN PROGRESS:
+
+🔬 Immunogenomics in Transplant Outcomes
+  Focus:      HLA diversity effects, long-term survival
+  Collaborators: immunology & hematology teams
+  Target:     Multiple publications 2026
+
+🔬 Competing Risks in Clinical Prediction
+  Focus:      Fine-Gray models, cause-specific hazards
+  Application: Multi-outcome modeling for HSCT
+  Target:     Methods paper Q2 2026
+
+all research driven by real clinical need and real patients
+`}
+        </pre>
+      </>
+    ),
+    skills: (
+      <>
+        <h3>~ ./skills --breakdown</h3>
+        <pre>
+{`AI / ML                PyTorch, TensorFlow, scikit-learn, deep learning
+                       computer vision, reinforcement learning, survival analysis
+
+Biomedical            immunology, immunogenomics, HLA typing, HSCT modeling
+                       bioinformatics, research methods, scientific writing
+
+Engineering           CAD, 3D printing, robotics, circuits, PCB design
+                       embedded systems, Raspberry Pi, BLDC motors, Linux
+
+Web / Software        React, Next.js, TypeScript, Tailwind, Framer Motion
+                       FastAPI, Git
+
+Languages             Python, C++, C, Java, JavaScript, R, SQL, Bash
+
+Leadership            nonprofit management, curriculum design, event ops
+                       public speaking, mentoring, music instruction
+
+Music                 ABRSM Grade 8 Piano, ABRSM Grade 5 Theory
+                       Fluent: English, Mandarin
+`}
+        </pre>
+      </>
+    ),
+    matrix: (
+      <>
+        <h3>~ matrix</h3>
+        <MatrixEgg />
       </>
     ),
   };
